@@ -1,0 +1,14 @@
+import requests
+import json
+from urllib.request import urlopen
+
+with urlopen('https://api.exchangeratesapi.io/latest') as response:
+    source = response.read()
+
+print(source)
+data = json.loads(source)
+
+print(len(data['rates']))
+
+for item in data['rates']:
+    print(item)
