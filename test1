@@ -12,3 +12,5 @@ print(len(data['rates']))
 
 for item in data['rates']:
     print(item)
+
+    
